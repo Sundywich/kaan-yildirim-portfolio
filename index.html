@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaan Yıldırım // Technical Game Designer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Kaan Yıldırım — Technical Game Designer & Gameplay Programmer specializing in combat systems, AI state machines, procedural mechanics, and engine tooling in Unreal Engine 5 & Unity.">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./css/winamp-theme.css?v=2.5">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+         AUTHENTIC CRT TUBE TV (TÜPLÜ TELEVİZYON) SCREEN WRAPPER
+         ========================================================================== -->
+    <div class="crt-screen-wrapper">
+
+        <!-- COMPACT NAVBAR SHELL (Depth-beveled floating island in docked state) -->
+        <div class="compact-navbar-shell" id="compactNavShell" aria-hidden="true">
+            <div class="compact-nav-divider" id="compactNavDivider"></div>
+        </div>
+
+        <!-- 1. DYNAMIC HEADER // KAAN YILDIRIM (Persistent Header) -->
+        <header class="dynamic-header" id="dynamicHeader" title="Scroll to Top">
+            <div class="dynamic-brand-row">
+                <span class="brand-bolt" title="System Core">⚡</span>
+                <h1 class="dynamic-main-title">KAAN YILDIRIM</h1>
+                <span class="dynamic-badge" id="dynamicBadge">TECHNICAL GAME DESIGNER</span>
+            </div>
+            <p class="dynamic-subtitle" id="dynamicSubtitle">Technical Game Designer Portfolio</p>
+        </header>
+
+        <!-- 2. DYNAMIC 4-ICON DOCK (Interpolates from Center to Header) -->
+        <nav class="dynamic-icon-dock" id="dynamicIconDock" aria-label="Main Navigation">
+
+            <!-- 1. About -->
+            <a href="#about" class="dock-item active" id="dockAbout" title="About Kaan">
+                <div class="dock-icon-tile">
+                    <!-- Retro User Avatar SVG -->
+                    <svg class="dock-svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                    </svg>
+                </div>
+                <span class="dock-label">About</span>
+                <span class="dock-tooltip">About</span>
+            </a>
+
+            <!-- 2. Games (formerly Showcase) -->
+            <a href="#games" class="dock-item" id="dockGames" title="Games">
+                <div class="dock-icon-tile">
+                    <!-- Retro Gamepad Controller SVG -->
+                    <svg class="dock-svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                    </svg>
+                </div>
+                <span class="dock-label">Games</span>
+                <span class="dock-tooltip">Games</span>
+            </a>
+
+            <!-- 3. Projects (formerly Games) -->
+            <a href="#projects" class="dock-item" id="dockProjects" title="Projects">
+                <div class="dock-icon-tile">
+                    <!-- Unrolled Blueprint / Architectural Plan Sheet SVG -->
+                    <svg class="dock-svg" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M6 2.5C4.07 2.5 2.5 3.9 2.5 5.6V17.5C2.5 19.16 3.84 20.5 5.5 20.5H20.5C21.33 20.5 22 19.83 22 19V4.5C22 3.67 21.33 3 20.5 3H7.5C7.1 2.7 6.6 2.5 6 2.5ZM5.8 4.2C6.63 4.2 7.3 4.87 7.3 5.7C7.3 6.53 6.63 7.2 5.8 7.2C4.97 7.2 4.3 6.53 4.3 5.7C4.3 4.87 4.97 4.2 5.8 4.2ZM7.3 9.5H8.5V18.5H7.3ZM10.5 6H14.5V10.5H10.5ZM16 6H19.5V9.5H16ZM16 11H19.5V14H16ZM10.5 12H14.5V17.5H10.5ZM16 15.5H19.5V17.5H16Z" />
+                    </svg>
+                </div>
+                <span class="dock-label">Projects</span>
+                <span class="dock-tooltip">Projects</span>
+            </a>
+
+            <!-- 4. Contact -->
+            <a href="#contact" class="dock-item" id="dockContact" title="Get in Touch">
+                <div class="dock-icon-tile">
+                    <!-- Retro Phone Contact SVG -->
+                    <svg class="dock-svg" viewBox="0 0 24 24">
+                        <path
+                            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.93c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.55c0-.55-.45-1-.99-1z" />
+                    </svg>
+                </div>
+                <span class="dock-label">Contact</span>
+                <span class="dock-tooltip">Contact</span>
+            </a>
+
+        </nav>
+
+        <!-- STAGE 1: HERO & ABOUT RUNWAY -->
+        <div class="scroll-runway" id="scrollRunway">
+            <div class="viewport-stage" id="viewportStage">
+
+                <!-- Scroll Down Hint (Visible on initial Hero landing) -->
+                <a href="#about" class="scroll-hint-bar" id="scrollHintBar" title="Scroll down to About Page">
+                    <span>SCROLL DOWN OR CLICK ABOUT</span>
+                    <span class="hint-arrow">▼</span>
+                </a>
+
+                <!-- About Card Stage -->
+                <article class="welcome-card-stage" id="welcomeCardStage">
+
+                    <!-- About Header Block (Outside the card box, matching Showcase, Games, Contact) -->
+                    <div class="about-header-block">
+                        <h2 class="about-main-title">About</h2>
+                        <p class="about-subtitle">Who I Am &amp; What I Do</p>
+                    </div>
+
+                    <!-- About Terminal Card Box -->
+                    <div class="about-card-box">
+                        <div class="welcome-grid-layout">
+
+                            <!-- Left Column: Profile Avatar & Identity -->
+                            <aside class="profile-col">
+                                <!-- 1:1 Profile Photo Frame -->
+                                <div class="profile-avatar-frame" id="profileAvatarFrame"
+                                    title="Drop profile.png / profile.jpg here to preview">
+                                    <img src="./assets/images/profile.png" alt="Kaan Yıldırım"
+                                        class="profile-avatar-img" id="profileAvatarImg"
+                                        onload="this.style.display='block'; document.getElementById('profilePlaceholder').style.display='none';"
+                                        onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';"
+                                        style="display: none;">
+
+                                    <!-- Fallback Dropzone Placeholder -->
+                                    <div class="profile-fallback-placeholder" id="profilePlaceholder"
+                                        style="display: flex;">
+                                        <div class="placeholder-icon">👤</div>
+                                        <div class="placeholder-text">PROFILE PHOTO</div>
+                                        <div class="placeholder-path">[ assets/images/profile.png ]</div>
+                                    </div>
+                                </div>
+
+                                <!-- Name & Unvan -->
+                                <h2 class="profile-user-name">Kaan Yıldırım</h2>
+                                <div class="profile-user-role">Technical Game Designer</div>
+
+                                <!-- 2x2 Grid of Social & CV Icons -->
+                                <div class="profile-social-grid" aria-label="Social &amp; Resume Links">
+
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/in/yldrmkaan" target="_blank"
+                                        rel="noopener noreferrer" class="grid-icon-btn btn-linkedin"
+                                        title="LinkedIn Profile">
+                                        <svg class="grid-btn-svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                                        </svg>
+                                        <span class="grid-btn-label">LinkedIn</span>
+                                    </a>
+
+                                    <!-- GitHub -->
+                                    <a href="https://github.com/Sundywich" target="_blank" rel="noopener noreferrer"
+                                        class="grid-icon-btn btn-github" title="GitHub Repositories">
+                                        <svg class="grid-btn-svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                                        </svg>
+                                        <span class="grid-btn-label">GitHub</span>
+                                    </a>
+
+                                    <!-- itch.io -->
+                                    <a href="https://sundywich.itch.io/" target="_blank" rel="noopener noreferrer"
+                                        class="grid-icon-btn btn-itch" title="itch.io Games">
+                                        <svg class="grid-btn-svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M2.5 5.5l1.6 1.7A3 3 0 0 0 6.3 8.3c1 0 2-.4 2.6-1.2l1.1-1.3 1.1 1.3c.7.8 1.6 1.2 2.6 1.2s2-.4 2.6-1.2l1.1-1.3 1.1 1.3c.7.8 1.6 1.2 2.6 1.2.9 0 1.8-.4 2.3-1.1l1.5-1.7v1.8c0 1.2-.5 2.3-1.4 3.1l-.8.7c-.5.4-.8 1-.8 1.7v5.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 2 17.5v-5.5c0-.7-.3-1.3-.8-1.7l-.8-.7a4 4 0 0 1-1.4-3.1V5.5h3.5zm6.5 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                                        </svg>
+                                        <span class="grid-btn-label">itch.io</span>
+                                    </a>
+
+                                    <!-- CV PDF Download -->
+                                    <a href="./assets/Kaan_Yildirim_CV.pdf" download class="grid-icon-btn btn-cv"
+                                        title="Download CV (PDF)">
+                                        <svg class="grid-btn-svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zm-1 14l-4-4h2.5v-4h3v4H16l-4 4z" />
+                                        </svg>
+                                        <span class="grid-btn-label">CV / PDF</span>
+                                    </a>
+
+                                </div>
+                            </aside>
+
+                            <!-- Right Column: About Bio -->
+                            <section class="welcome-info-pane">
+                                <h2 class="welcome-pane-title">
+                                    Greetings, <span>I'm Kaan</span>
+                                </h2>
+
+                                <p class="welcome-pane-body">
+                                    I'm <strong>Kaan</strong>, a <strong>Technical Game Designer &amp; Gameplay
+                                        Programmer</strong> based in Istanbul. I specialize in bridging the gap between
+                                    artistic design vision and robust game architecture — building fluid combat
+                                    mechanics,
+                                    scalable AI perception &amp; behavior state machines, and flexible editor tooling in
+                                    <strong>Unreal Engine 5 (C++)</strong> and <strong>Unity (C#)</strong>.
+                                </p>
+                            </section>
+
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             STAGE 2: GAMES (FEATURED TITLES CAROUSEL SECTION)
+             ========================================================================== -->
+        <section class="showcase-section" id="gamesSection">
+
+            <!-- Games Header -->
+            <div class="showcase-header-block">
+                <h2 class="showcase-main-title">GAMES</h2>
+                <p class="showcase-subtitle">Featured Games &amp; Highlights</p>
+            </div>
+
+            <!-- Carousel Component with Peek Previews -->
+            <div class="showcase-carousel-container">
+
+                <!-- Left Navigation Arrow (◀) -->
+                <button class="carousel-nav-btn btn-prev-proj" id="btnPrevProject" title="Previous Game"
+                    aria-label="Previous Game">
+                    ◀
+                </button>
+
+                <!-- Carousel Viewport & Track -->
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <!-- PROJECT 1 -->
+                        <article class="showcase-card card-active" data-index="0">
+                            <div class="showcase-card-grid">
+
+                                <!-- Left Column: Game Image & Future Links Placeholder -->
+                                <div class="project-media-col">
+                                    <div class="game-image-box"
+                                        title="Drop project1.png / project1.jpg here to preview">
+                                        <img src="./assets/images/projects/project1.png" alt="Project ChronoBlade"
+                                            class="game-img-elem"
+                                            onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            style="display: none;">
+                                        <div class="game-image-placeholder" style="display: flex;">
+                                            <div class="game-placeholder-icon">🎮</div>
+                                            <div class="game-placeholder-label">GAME IMAGE</div>
+                                            <div class="game-placeholder-sub">[ assets/images/projects/project1.png ]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Reserved for future action links -->
+                                    <div class="game-links-placeholder"></div>
+                                </div>
+
+                                <!-- Right Column: Game Title & Details -->
+                                <div class="project-details-col">
+                                    <h3 class="game-title-text">Project: Detective</h3>
+                                    <div class="game-genre-tag">[ Unreal Engine 5 • Combat &amp; Time Systems ]</div>
+                                    <p class="game-details-text">
+                                        A Co-op Detective Adventure Game built in <strong>UE5 C++</strong>. 2 Players
+                                        play as 2 brothers trying to solve a murder mystery.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- PROJECT 2 -->
+                        <article class="showcase-card card-peek" data-index="1">
+                            <div class="showcase-card-grid">
+
+                                <!-- Left Column: Game Image & Future Links Placeholder -->
+                                <div class="project-media-col">
+                                    <div class="game-image-box"
+                                        title="Drop project2.png / project2.jpg here to preview">
+                                        <img src="./assets/images/projects/project2.png" alt="Void Architect"
+                                            class="game-img-elem"
+                                            onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            style="display: none;">
+                                        <div class="game-image-placeholder" style="display: flex;">
+                                            <div class="game-placeholder-icon">🕹️</div>
+                                            <div class="game-placeholder-label">GAME IMAGE</div>
+                                            <div class="game-placeholder-sub">[ assets/images/projects/project2.png ]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Reserved for future action links -->
+                                    <div class="game-links-placeholder"></div>
+                                </div>
+
+                                <!-- Right Column: Game Title & Details -->
+                                <div class="project-details-col">
+                                    <h3 class="game-title-text">Coming Soon</h3>
+                                    <div class="game-genre-tag">[ Coming Soon ]</div>
+                                    <p class="game-details-text">
+                                        <strong>Loading...</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Right Navigation Arrow (▶) -->
+                <button class="carousel-nav-btn btn-next-proj" id="btnNextProject" title="Next Game"
+                    aria-label="Next Game">
+                    ▶
+                </button>
+
+            </div>
+
+            <!-- Game Counter & Indicator Dots -->
+            <div class="carousel-pagination-block">
+                <span class="carousel-counter-text" id="carouselCounter">01 / 02 • PROJECT: DETECTIVE</span>
+                <div class="carousel-dots-wrap" id="carouselDots" style="display: flex; gap: 8px;"></div>
+            </div>
+
+        </section>
+
+        <!-- ==========================================================================
+             STAGE 3: PROJECTS (GAME JAMS & PLAYABLE PROTOTYPES GRID)
+             ========================================================================== -->
+        <section class="games-section" id="projectsSection">
+
+            <!-- Section Header -->
+            <div class="games-header-block">
+                <h2 class="games-main-title">PROJECTS</h2>
+                <p class="games-subtitle">Game Jams, Prototypes &amp; Playable Titles</p>
+
+                <!-- 3 Category Tab Buttons: Prototypes | Jams | Other -->
+                <div class="projects-tabs-nav" role="tablist" aria-label="Project Categories">
+                    <button class="project-tab-btn tab-btn-cyan active" id="tabBtnPrototypes" role="tab"
+                        aria-selected="true" aria-controls="tabPanePrototypes" data-target="tabPanePrototypes">
+                        Prototypes
+                    </button>
+                    <button class="project-tab-btn tab-btn-magenta" id="tabBtnJams" role="tab" aria-selected="false"
+                        aria-controls="tabPaneJams" data-target="tabPaneJams">
+                        Jams
+                    </button>
+                    <button class="project-tab-btn tab-btn-amber" id="tabBtnOther" role="tab" aria-selected="false"
+                        aria-controls="tabPaneOther" data-target="tabPaneOther">
+                        Other
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 TAB PANE 1: PROTOTYPES
+                 ========================================================================== -->
+            <div class="projects-tab-pane active" id="tabPanePrototypes" role="tabpanel"
+                aria-labelledby="tabBtnPrototypes">
+                <div class="games-grid">
+
+                    <!-- PROTOTYPE 1 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">PROTOTYPE</span>
+                            <img src="./assets/images/games/game1.png" alt="OhmMyWatt!" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">🎮</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/game1.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-green">Point&amp;Click</span>
+                                <span class="game-tag tag-magenta">Serious Game</span>
+                                <span class="game-tag tag-cyan">Unreal Engine</span>
+                            </div>
+                            <h3 class="game-card-title">OhmMyWatt!</h3>
+                            <p class="game-card-desc">
+                                A Serious Game for high school students to learn about electricity and basic circuits.
+                            </p>
+                            <a href="https://youtu.be/_bf5tMPa4l4" target="_blank" rel="noopener noreferrer"
+                                class="game-card-action-btn" title="Watch The Gameplay">
+                                <span class="btn-icon">📺</span>
+                                <span class="btn-text">Watch The Gameplay</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROTOTYPE 2 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">PROTOTYPE</span>
+                            <img src="./assets/images/games/game2.png" alt="Sentinel" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">📺</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/game2.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-green">3D</span>
+                                <span class="game-tag tag-green">Action Platformer</span>
+                                <span class="game-tag tag-cyan">Unreal Engine</span>
+                            </div>
+                            <h3 class="game-card-title">Sentinel</h3>
+                            <p class="game-card-desc">
+                                A 3D action platformer inspired by Portal and Mirror's Edge. A robot navigating
+                                a hostile facility to track down and eliminate its arch-nemesis.
+                            </p>
+                            <a href="https://youtu.be/LDu2T7_HDeQ" target="_blank" rel="noopener noreferrer"
+                                class="game-card-action-btn" title="Watch The Trailer">
+                                <span class="btn-icon">📺</span>
+                                <span class="btn-text">Watch The Trailer</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROTOTYPE 3 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">PROTOTYPE</span>
+                            <img src="./assets/images/games/game3.png" alt="Taverna" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">🕹️</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/game3.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-green">Taverna Sim</span>
+                                <span class="game-tag tag-cyan">Unreal Engine</span>
+                            </div>
+                            <h3 class="game-card-title">Taverna</h3>
+                            <p class="game-card-desc">
+                                A chill taverna simulator where you manage your own tavern, craft drinks, upgrade, host
+                                events and more.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=i77gr_3NudI" target="_blank"
+                                rel="noopener noreferrer" class="game-card-action-btn" title="Watch The Trailer">
+                                <span class="btn-icon">🎮</span>
+                                <span class="btn-text">Watch The Trailer</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROTOTYPE 4 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">PROTOTYPE</span>
+                            <img src="./assets/images/games/game4.png" alt="PathoGen: Street"
+                                class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">🕹️</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/game4.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-green">Beat Em Up</span>
+                                <span class="game-tag tag-amber">Unity</span>
+                            </div>
+                            <h3 class="game-card-title">PathoGen: Street</h3>
+                            <p class="game-card-desc">
+                                A 2D Beat Em Up game I developed around my own Superhero concept "PathoGen".
+                                Fight your way through the streets with your punches and special abilities!
+                            </p>
+                            <a href="https://youtu.be/SIGggK1PS2A?si=Uyz6LqDHsEhjhIXn" target="_blank"
+                                rel="noopener noreferrer" class="game-card-action-btn" title="Watch The Gameplay">
+                                <span class="btn-icon">🎮</span>
+                                <span class="btn-text">Watch The Gameplay</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROTOTYPE 5 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">PROTOTYPE</span>
+                            <img src="./assets/images/games/game5.png" alt="Quest Master" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">🕹️</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/game5.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-green">Resource Management</span>
+                                <span class="game-tag tag-cyan">Unreal Engine</span>
+                            </div>
+                            <h3 class="game-card-title">Quest Master</h3>
+                            <p class="game-card-desc">
+                                A Resource Management game where the player plays as the quest-giver instead of being a
+                                quest-taker.
+                                Your resources are your quests. Check NPC stats, choose wisely, don't forget about your
+                                relationship with clans.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=YFHLLFs9oc8" target="_blank"
+                                rel="noopener noreferrer" class="game-card-action-btn" title="Watch The Trailer">
+                                <span class="btn-icon">🎮</span>
+                                <span class="btn-text">Watch The Trailer</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 TAB PANE 2: JAMS
+                 ========================================================================== -->
+            <div class="projects-tab-pane" id="tabPaneJams" role="tabpanel" aria-labelledby="tabBtnJams"
+                style="display: none;">
+                <div class="games-grid">
+
+                    <!-- JAM GAME 1 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">Epic Mega Jam 2025</span>
+                            <img src="./assets/images/games/jam1.png" alt="jam1" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">🕹️</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/jam1.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-green">Precision Puzzle</span>
+                                <span class="game-tag tag-cyan">Unreal Engine</span>
+                            </div>
+                            <h3 class="game-card-title">Everest Film Studio</h3>
+                            <p class="game-card-desc">
+                                A first-person precision puzzle game set on a movie set. Interpret the script and
+                                execute every action/dialogues perfectly. One wrong move and the director shouts
+                                'CUT!'.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=cLnYJJnQoyw" target="_blank"
+                                rel="noopener noreferrer" class="game-card-action-btn" title="Watch The Trailer">
+                                <span class="btn-icon">🎮</span>
+                                <span class="btn-text">Watch The Trailer</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- JAM GAME 2 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">Techcamp Istanbul 2024</span>
+                            <img src="./assets/images/games/jam2.png" alt="jam2" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">📺</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/jam2.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-magenta">Serious Game</span>
+                                <span class="game-tag tag-cyan">Unreal Engine</span>
+                            </div>
+                            <h3 class="game-card-title">MindQuake</h3>
+                            <p class="game-card-desc">
+                                A PC game designed to help understand Post-Traumatic Stress Disorder (PTSD) experienced
+                                by earthquake survivors.
+                            </p>
+                            <a href="https://youtu.be/FR1QwJ7baRU" target="_blank" rel="noopener noreferrer"
+                                class="game-card-action-btn" title="Watch Project">
+                                <span class="btn-icon">📺</span>
+                                <span class="btn-text">Watch The Trailer</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- JAM GAME 3 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">BUG Spring Jam 2023</span>
+                            <img src="./assets/images/games/jam3.png" alt="jam3" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">📺</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/jam3.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-magenta">2D Platformer</span>
+                                <span class="game-tag tag-cyan">Unity</span>
+                            </div>
+                            <h3 class="game-card-title">Longing</h3>
+                            <p class="game-card-desc">
+                                My first digital game jam experience.
+                            </p>
+                            <a href="https://seymojet.itch.io/longing" target="_blank" rel="noopener noreferrer"
+                                class="game-card-action-btn" title="Try The Game">
+                                <span class="btn-icon">📺</span>
+                                <span class="btn-text">Try The Game</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                 TAB PANE 3: OTHER
+                 ========================================================================== -->
+            <div class="projects-tab-pane" id="tabPaneOther" role="tabpanel" aria-labelledby="tabBtnOther"
+                style="display: none;">
+                <div class="games-grid">
+
+                    <!-- OTHER PROJECT 1 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop game image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge">Dialogue Design Work</span>
+                            <img src="./assets/images/games/other1.png" alt="Other1" class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">🕹️</div>
+                                <div class="game-card-placeholder-text">GAME MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/other1.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-amber">Unity</span>
+                            </div>
+                            <h3 class="game-card-title">The Miriballis Castle</h3>
+                            <p class="game-card-desc">
+                                A dialogue design project where I wrote 4000+ words of dialogues. There's a guard
+                                guarding "The Miribalis Castle", the player tries to convince the guard to let them in.
+                                No game, just chatting with the NPC.
+                            </p>
+                            <a href="https://sundywich.itch.io/the-miribalis-castle" target="_blank"
+                                rel="noopener noreferrer" class="game-card-action-btn" title="Download The Build">
+                                <span class="btn-icon">🎮</span>
+                                <span class="btn-text">Download The Build</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- OTHER PROJECT 2 -->
+                    <article class="game-card">
+                        <div class="game-card-media-box"
+                            title="Drop project image (.png/.jpg) or video (.mp4) here to preview">
+                            <span class="game-card-jam-badge badge-cyan">ENGINE TOOL</span>
+                            <img src="./assets/images/games/other2.png" alt="Procedural Level Tool"
+                                class="game-card-media-elem"
+                                onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                style="display: none;">
+                            <div class="game-card-media-placeholder" style="display: flex;">
+                                <div class="game-card-placeholder-icon">⚙️</div>
+                                <div class="game-card-placeholder-text">PROJECT MEDIA</div>
+                                <div class="game-card-placeholder-path">[ assets/images/games/other2.png or .mp4 ]</div>
+                            </div>
+                        </div>
+
+                        <div class="game-card-body">
+                            <div class="game-card-tags">
+                                <span class="game-tag tag-cyan">Unreal Engine 5</span>
+                                <span class="game-tag tag-amber">C++ / Tooling</span>
+                            </div>
+                            <h3 class="game-card-title">Procedural Level Tool</h3>
+                            <p class="game-card-desc">
+                                Custom editor utility tool developed in UE5 C++ for procedural dungeon layout generation
+                                and rule-based asset placement.
+                            </p>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                class="game-card-action-btn" title="View Source &amp; Tool">
+                                <span class="btn-icon">⚡</span>
+                                <span class="btn-text">View Project</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==========================================================================
+             STAGE 4: CONTACT ME SECTION
+             ========================================================================== -->
+        <section class="contact-section" id="contactSection">
+
+            <!-- Contact Header Block -->
+            <div class="contact-header-block">
+                <h2 class="contact-main-title">Contact Me</h2>
+                <p class="contact-subtitle">Get in touch &amp; collaborate</p>
+            </div>
+
+            <!-- Contact Card Container -->
+            <div class="contact-card-container">
+                <div class="contact-card">
+
+                    <!-- Inner Dashed Retro Border Frame -->
+                    <div class="contact-card-inner">
+
+                        <!-- Top: Email Display & Copy Bar -->
+                        <div class="contact-email-bar" id="contactEmailBar">
+                            <div class="contact-email-display">
+                                <span class="contact-email-icon">✉️</span>
+                                <span class="contact-email-text"
+                                    id="contactEmailText">kaanyildirimbusiness@hotmail.com</span>
+                            </div>
+                            <button class="contact-copy-btn" id="contactCopyBtn" title="Copy email to clipboard"
+                                aria-label="Copy Email to Clipboard">
+                                <span class="copy-icon" id="copyIcon">📋</span>
+                                <span class="copy-label" id="copyLabel">Copy</span>
+                            </button>
+                        </div>
+
+                        <!-- Bottom: Action Buttons Grid -->
+                        <div class="contact-action-grid" aria-label="Contact and Social Links">
+
+                            <!-- Send E-Mail -->
+                            <a href="mailto:kaanyildirimbusiness@hotmail.com" class="contact-action-btn btn-email"
+                                title="Send direct e-mail">
+                                <span class="contact-btn-icon">📨</span>
+                                <span class="contact-btn-label">Send E-Mail</span>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                class="contact-action-btn btn-linkedin" title="Visit LinkedIn Profile">
+                                <svg class="contact-svg-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                                </svg>
+                                <span class="contact-btn-label">LinkedIn</span>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                class="contact-action-btn btn-github" title="View GitHub Repositories">
+                                <svg class="contact-svg-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                                </svg>
+                                <span class="contact-btn-label">GitHub</span>
+                            </a>
+
+                            <!-- Itch.io -->
+                            <a href="https://itch.io" target="_blank" rel="noopener noreferrer"
+                                class="contact-action-btn btn-itch" title="Play Games on Itch.io">
+                                <svg class="contact-svg-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M2.5 5.5l1.6 1.7A3 3 0 0 0 6.3 8.3c1 0 2-.4 2.6-1.2l1.1-1.3 1.1 1.3c.7.8 1.6 1.2 2.6 1.2s2-.4 2.6-1.2l1.1-1.3 1.1 1.3c.7.8 1.6 1.2 2.6 1.2.9 0 1.8-.4 2.3-1.1l1.5-1.7v1.8c0 1.2-.5 2.3-1.4 3.1l-.8.7c-.5.4-.8 1-.8 1.7v5.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 2 17.5v-5.5c0-.7-.3-1.3-.8-1.7l-.8-.7a4 4 0 0 1-1.4-3.1V5.5h3.5zm6.5 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                                </svg>
+                                <span class="contact-btn-label">Itch.io</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- JAVASCRIPT ENGINE -->
+    <script src="./js/winamp.js?v=2.4"></script>
+</body>
+
+</html>
