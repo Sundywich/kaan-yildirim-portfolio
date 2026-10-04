@@ -267,7 +267,7 @@ function initScrollScrubber() {
       if (gamesSection) {
         gamesSection.scrollIntoView({
           behavior: 'smooth',
-          block: 'center'
+          block: 'start'
         });
       }
     });
@@ -295,7 +295,7 @@ function initScrollScrubber() {
       if (contactSection) {
         contactSection.scrollIntoView({
           behavior: 'smooth',
-          block: 'center'
+          block: 'start'
         });
       }
     });
@@ -362,8 +362,12 @@ function initShowcaseCarousel() {
     const viewport = document.querySelector('.carousel-viewport');
     const activeCard = cards[currentIndex];
     if (activeCard && viewport && track) {
-      const viewportCenter = viewport.offsetWidth / 2;
-      const cardCenter = activeCard.offsetLeft + (activeCard.offsetWidth / 2);
+      // Normalize for CSS zoom (UI scaling on smaller screens): offset* values may be
+      // reported in zoomed pixels, while the track transform is applied in local CSS pixels.
+      const localWidth = parseFloat(getComputedStyle(viewport).width) || viewport.offsetWidth;
+      const zoomRatio = viewport.offsetWidth / localWidth || 1;
+      const viewportCenter = (viewport.offsetWidth / 2) / zoomRatio;
+      const cardCenter = (activeCard.offsetLeft + (activeCard.offsetWidth / 2)) / zoomRatio;
       const targetTranslateX = viewportCenter - cardCenter;
       track.style.transform = `translateX(${targetTranslateX}px)`;
     }

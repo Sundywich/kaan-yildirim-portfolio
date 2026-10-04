@@ -1676,9 +1676,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 110px 1.5rem 6rem;
+  padding: 135px 1.5rem 6rem;
   z-index: 30;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 0;
 }
 
 .contact-header-block {
@@ -1985,3 +1985,53 @@ body {
   }
 }
 
+
+/* ==========================================================================
+   RESPONSIVE UI SCALE (Shorter desktop viewports, e.g. 1920x1080 @ 125% / 150%)
+   --------------------------------------------------------------------------
+   Section content is zoomed out based on viewport HEIGHT, so large screens
+   (e.g. MacBook Pro) stay exactly as designed. Section paddings are NOT zoomed,
+   so the clearance below the fixed "Kaan Yıldırım" navbar is always preserved.
+   ========================================================================== */
+
+:root {
+  --ui-scale: 1;
+  --section-side-pad: 1.5rem;
+}
+
+@media (min-width: 861px) and (max-height: 820px) {
+  :root { --ui-scale: 0.9; }
+}
+
+@media (min-width: 861px) and (max-height: 740px) {
+  :root { --ui-scale: 0.8; }
+}
+
+@media (min-width: 861px) and (max-height: 640px) {
+  :root { --ui-scale: 0.72; }
+}
+
+/* Extra breathing room at the left/right edges on mid-size desktop widths */
+@media (min-width: 861px) and (max-width: 1680px) {
+  :root { --section-side-pad: 4rem; }
+}
+
+.welcome-card-stage,
+.showcase-section > *,
+.games-section > *,
+.contact-section > * {
+  zoom: var(--ui-scale);
+}
+
+@media (min-width: 861px) {
+  .showcase-section,
+  .games-section,
+  .contact-section {
+    padding-left: var(--section-side-pad);
+    padding-right: var(--section-side-pad);
+  }
+
+  .welcome-card-stage {
+    max-width: min(880px, calc(100vw - 2 * var(--section-side-pad)));
+  }
+}
