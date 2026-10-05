@@ -844,6 +844,78 @@ body {
   font-weight: 600;
 }
 
+/* Focus & Core Skills Badges */
+.about-skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.about-skill-badge {
+  font-family: var(--font-tech);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  cursor: default;
+  user-select: none;
+  backdrop-filter: blur(6px);
+}
+
+.about-skill-badge.badge-cyan {
+  background: linear-gradient(180deg, rgba(0, 240, 255, 0.14) 0%, rgba(0, 160, 220, 0.06) 100%);
+  border: 1.5px solid rgba(0, 240, 255, 0.55);
+  color: var(--crt-cyan);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+.about-skill-badge.badge-cyan:hover {
+  background: rgba(0, 240, 255, 0.22);
+  border-color: var(--crt-cyan);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.55);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.about-skill-badge.badge-magenta {
+  background: linear-gradient(180deg, rgba(255, 42, 109, 0.14) 0%, rgba(200, 20, 80, 0.06) 100%);
+  border: 1.5px solid rgba(255, 42, 109, 0.55);
+  color: #ff66aa;
+  text-shadow: 0 0 8px rgba(255, 42, 109, 0.5);
+}
+
+.about-skill-badge.badge-magenta:hover {
+  background: rgba(255, 42, 109, 0.22);
+  border-color: #ff2a6d;
+  box-shadow: 0 0 16px rgba(255, 42, 109, 0.55);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.about-skill-badge.badge-amber {
+  background: linear-gradient(180deg, rgba(255, 183, 3, 0.14) 0%, rgba(200, 140, 0, 0.06) 100%);
+  border: 1.5px solid rgba(255, 183, 3, 0.55);
+  color: var(--crt-amber);
+  text-shadow: 0 0 8px rgba(255, 183, 3, 0.5);
+}
+
+.about-skill-badge.badge-amber:hover {
+  background: rgba(255, 183, 3, 0.22);
+  border-color: var(--crt-amber);
+  box-shadow: 0 0 16px rgba(255, 183, 3, 0.55);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
 /* ==========================================================================
    SHOWCASE SECTION (A.K.A FEATURED PROJECTS CAROUSEL)
    ========================================================================== */
@@ -1229,6 +1301,16 @@ body {
 
   .game-title-text {
     font-size: 1.3rem;
+  }
+
+  .about-skills-badges {
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .about-skill-badge {
+    font-size: 0.72rem;
+    padding: 5px 11px;
   }
 
   .compact-navbar-shell {
